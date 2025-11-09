@@ -12,11 +12,9 @@ function onSongleAPIReady(Songle) {
   player.addPlugin(new Songle.Plugin.SongleSync({
 	  enabled: true,    // 新しく接続を開始
   clientId: "unique-" + Date.now()
-  }
-	  
-  ));
+  }));
 
-  player.useMedia('https://www.youtube.com/watch?v=EAgACSowE5k');
+  player.useMedia('https://youtu.be/9HKbo1FstOE?si=zpkfS8K7KCzAvCQu');
 
 
 //ビート
