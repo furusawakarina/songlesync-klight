@@ -11,7 +11,7 @@ function onSongleAPIReady(Songle) {
 
   player.addPlugin(new Songle.Plugin.SongleSync());
 
-  player.useMedia('https://youtu.be/9HKbo1FstOE?si=oQDYp79THG6JsZbb');
+  player.useMedia('https://www.youtube.com/watch?v=EAgACSowE5k');
 
 
 //ビート
