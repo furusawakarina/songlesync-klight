@@ -2,13 +2,13 @@ function onSongleAPIReady(Songle){
 	
   var player = new Songle.Player({
       accessToken: '00000144-8PDPBsb' // アクセストークン
-	//mediaElement: "#songle"
+	  mediaElement: "#songle"
   });
 
-	const player =
+	/*const player =
   new window.Songle.Player({
     mediaElement: "#songle"
-  });
+  });*/
 
 player.on("ready",
   function(ev) {
