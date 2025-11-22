@@ -29,12 +29,13 @@ player.on("chordEnter",
      //do someting ...
 	const chordName = ev.data.chord.name;
 	let color = "white";
-	document.body.style.backgroundColor {
+	
 		
 		if (chordName.startsWith("C")){
 		color = "hsl(20,85%,60%)";
 		}
-	}
+	  
+	document.body.style.backgroundColor = color;
 	
   });
 
@@ -59,9 +60,6 @@ const stopButton = document.querySelector('button.stop');
   });
 
 //ボタンでの切り替え
-
-
-
 const buttons = document.querySelectorAll('button[data-color]');
 
 buttons.forEach(btn => {
