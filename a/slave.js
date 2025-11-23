@@ -25,7 +25,7 @@ player.addPlugin(new Songle.Plugin.Chord());
 
 player.on("chordEnter",
   function(ev) {
-	if (!syncMode) return;
+	if (!syncMode = ture) ;//return;
      //do someting ...
 	const chordName = ev.data.chord.name;
 	let color = "white";
