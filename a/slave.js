@@ -25,7 +25,7 @@ let syncMode = false;
 
 splayer.on("chordEnter",
   function(ev) {
-	if (!syncMode )return;
+	if (!syncMode) return;
      //do someting ...
 	const chordName = ev.data.chord.name;
 	let color = "white";
