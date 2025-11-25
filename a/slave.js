@@ -30,19 +30,24 @@ splayer.on("chordEnter",
 	const chordName = ev.data.chord.name;
 	let color = "white";
 		if (chordName.startsWith("C")){
-		color = "hsl(20,85%,60%)";
+		color = "hsl(20,70%,60%)";
 		} else if (chordName.startsWith("G")) {
-		    color = "hsl(40, 80%, 60%)";
+		    color = "hsl(40, 70%, 60%)";
 		  } else if (chordName.startsWith("F")) {
-		    color = "hsl(50, 80%, 55%)";
+		    color = "hsl(55, 65%, 60%)";
 		  } else if (chordName.startsWith("Am")) {
-		    color = "hsl(200, 70%, 45%)";
+		    color = "hsl(220, 55%, 55%)";
 		  } else if (chordName.startsWith("Dm")) {
-		    color = "hsl(180, 65%, 43%)";
+		    color = "hsl(200, 50%, 50%)";
 		  } else if (chordName.startsWith("Em")) {
-		    color = "hsl(220, 70%, 47%)";
+		    color = "hsl(240, 60%, 50%)";
+		  }else if (chordName.startsWith("G7")) {
+		    color = "hsl(40, 85%, 55%)";
+		  }else if (chordName.startsWith("Cdim")) {
+		    color = "hsl(300, 95%, 40%)";
+		  }else if (chordName.startsWith("Csus4")) {
+		    color = "hsl(20, 95%, 60%)";
 		  }
-
 	  
 	document.body.style.backgroundColor = color;
 	
