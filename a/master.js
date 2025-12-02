@@ -8,11 +8,11 @@ function onSongleAPIReady(Songle) {
      secretToken: '5ruktp2XZhuB1rKBLhUTkTdq6b46bHDb'  // 認証用トークン
 	
   });
-
+/*
   player.addPlugin(new Songle.Plugin.SongleSync({
 	  enabled: true,    // 新しく接続を開始
   clientId: "unique-" + Date.now()
-  }));
+  }));*/
 
   player.useMedia('https://www.youtube.com/watch?v=JedKBJVHhiE');
 
@@ -41,9 +41,9 @@ player.addPlugin(new Songle.Plugin.Chord());
 
 player.on("chordEnter",
   function(ev) {
-    console.log("Chord event:", e.data.chord);
+    console.log("Chord event:", ev.data.chord);
 
-    const chordName = e.data.chord.chordName;   // 例: "Am", "F#dim", "G7"
+    const chordName = ev.data.chord.chordName;   // 例: "Am", "F#dim", "G7"
     const chordType = classifyChord(chordName); // "M","m","sus","dim","7" のどれか
     const key = player.data.song && player.data.song.key;
 
@@ -62,7 +62,7 @@ player.on("chordEnter",
     const blended = blendColors(rgb, white, 0.3); // 0.3だけ白に寄せる
 */
     document.body.style.backgroundColor =
-      `rgb(${blended.r}, ${blended.g}, ${blended.b})`;
+      `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
   });
 
   // 和音の種類に応じた色相（Hue）
