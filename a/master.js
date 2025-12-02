@@ -62,7 +62,7 @@ player.on("chordEnter",
     const blended = blendColors(rgb, white, 0.3); // 0.3だけ白に寄せる
 */
     document.body.style.backgroundColor =
-      `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+      "rgb(${rgb.r}, ${rgb.g}, ${rgb.b})";
   });
 
   // 和音の種類に応じた色相（Hue）
