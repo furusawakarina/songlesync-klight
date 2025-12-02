@@ -14,7 +14,7 @@ function onSongleAPIReady(Songle) {
   clientId: "unique-" + Date.now()
   }));
 
-  player.useMedia('https://youtu.be/9HKbo1FstOE');
+  player.useMedia('https://www.youtube.com/watch?v=JedKBJVHhiE');
 
 
 //ビート
