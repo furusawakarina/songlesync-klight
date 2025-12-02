@@ -14,7 +14,7 @@ function onSongleAPIReady(Songle) {
   clientId: "unique-" + Date.now()
   }));
 
-  player.useMedia('https://youtu.be/9HKbo1FstOE?si=zpkfS8K7KCzAvCQu');
+  player.useMedia('https://youtu.be/9HKbo1FstOE');
 
 
 //ビート
@@ -57,10 +57,10 @@ player.on("chordEnter",
 
     const rgb = hsvToRgb(H, S, V);
 
-    // ★ 白にちょっと寄せたい場合（中間色を挟む）
+    /*// ★ 白にちょっと寄せたい場合（中間色を挟む）
     const white = { r: 255, g: 255, b: 255 };
     const blended = blendColors(rgb, white, 0.3); // 0.3だけ白に寄せる
-
+*/
     document.body.style.backgroundColor =
       `rgb(${blended.r}, ${blended.g}, ${blended.b})`;
   });
