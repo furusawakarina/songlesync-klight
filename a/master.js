@@ -87,6 +87,37 @@ function hsvToRgb(h, s, v) {
   };
 }
 
+player.on("chordEnter", function(e) {
+  let chordType = e.data.chord.chordName;  // "M" "m" "dim" など
+  let key = player.data.song.key;          // 0〜11
+
+  // 仮：緊張度（後で好きに変えられる）
+  let tensionTable = { "M": 0, "m": 1, "sus": 1, "7": 2, "dim": 3 };
+  let tension = tensionTable[chordType] ?? 0;
+
+  let H = getHue(chordType);
+  let S = getSaturation(key);
+  let V = getValue(tension);
+
+  let rgb = hsvToRgb(H, S, V);
+
+  document.body.style.backgroundColor =
+    `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+});
+
+	function lerp(a, b, t) {
+  return a + (b - a) * t;
+}
+
+function blendColors(c1, c2, t) {
+  return {
+    r: Math.round(lerp(c1.r, c2.r, t)),
+    g: Math.round(lerp(c1.g, c2.g, t)),
+    b: Math.round(lerp(c1.b, c2.b, t))
+  };
+}
+let white = { r:255, g:255, b:255 };
+let blended = blendColors(rgb, white, 0.3); // 0.3は中間度
 
 
 
