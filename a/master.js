@@ -14,7 +14,7 @@ function onSongleAPIReady(Songle) {
   clientId: "unique-" + Date.now()
   }));
 
-  player.useMedia('https://www.youtube.com/watch?v=JedKBJVHhiE');
+  player.useMedia("https://www.youtube.com/watch?v=JedKBJVHhiE");
 
 
 
