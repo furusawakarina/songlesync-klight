@@ -23,7 +23,7 @@ player.addPlugin(new Songle.Plugin.Chord());
 
 player.on("chordEnter",
   function(ev) {
-	  if (!syncMode) return;
+	  //if (!syncMode) return;
      //do someting ...
 	const chordName = ev.data.chord.name;
 	  
@@ -83,7 +83,7 @@ player.on("chordEnter",
 		  else if (chordName.includes("/7"))
 			  l = 55;
 
-	  document.body.style.backgroundColor = 'hsl(${h}, ${s}%, ${l}%)';
+	  document.body.style.backgroundColor = `hsl(${h}, ${s}%, ${l}%)`;
 								 
   });
 
